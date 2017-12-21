@@ -13,16 +13,13 @@ int main() {
 
 void montyHall(int totalSim) {
   int totalDoors = 3;
-  int carDoor, userChoice, openDoor;
+  int carDoor, userChoice;
 
   int carBeforeSwitch = 0, carAfterSwitch = 0;
 
   for (int i=0; i<totalSim; i++) {
     carDoor = rand()%totalDoors;
     userChoice = rand()%totalDoors;
-
-    openDoor = (1+carDoor)%3;
-    if (openDoor == userChoice) { openDoor = (userChoice +1)%3; }
 
     if (userChoice == carDoor) {
       carBeforeSwitch++;
